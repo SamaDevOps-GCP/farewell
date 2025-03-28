@@ -7,30 +7,65 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
             text-align: center;
             padding: 20px;
         }
-        h1 {
-            color: #333;
-        }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #FFD700;
+            font-size: 28px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h2 {
+            color: #FFA500;
+            margin-top: 20px;
         }
         .team {
             margin-top: 20px;
             padding: 10px;
-            background: #e0e0e0;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
             text-align: left;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
         .team p {
             margin: 8px 0;
+        }
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .photo-gallery img {
+            width: 45%;
+            max-height: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #FFD700;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -38,34 +73,45 @@
     <div class="container">
         <h1>🚀 Samadhan's Farewell Deployment</h1>
         <p>As I push my final commit at Datametica, I want to thank each and every one of you.</p>
-        
+
+        <h2>📸 Team Memories</h2>
+        <div class="photo-gallery">
+            <img src="team_photo1.jpg" alt="Team Photo 1">
+            <img src="team_photo2.jpg" alt="Team Photo 2">
+            <img src="team_photo3.jpg" alt="Team Photo 3">
+            <img src="team_photo4.jpg" alt="Team Photo 4">
+        </div>
+
         <h2>👥 Special Thanks to My Amazing Team</h2>
         <div class="team">
-            <p>🛠 [Colleague 1] – The Kubernetes Controller, always ensuring things are running smoothly. No crash loops on your watch!</p>
-            <p>☁️ [Colleague 2] – The GCP IAM Master, making sure permissions are always right. No one gets unauthorized access when you’re around!</p>
+            <h2>🏆 Leadership Crew</h2>
+            <p>👨‍✈️ <b>[Manager’s Name]</b> - The DevOps Captain, guiding the team like a Kubernetes operator!</p>
+            <p>🏗 <b>[Architect’s Name]</b> - The Infra Architect, building scalable solutions one Terraform module at a time!</p>
+
+            <h2>🛠 DevOps Warriors</h2>
+            <p>🔄 [Colleague 1] – The CI/CD Guardian, ensuring zero broken builds in every deployment!</p>
+            <p>☁️ [Colleague 2] – The GCP IAM Master, making sure permissions are always right.</p>
             <p>🖥 [Colleague 3] – The Compute Engine Guru, spinning up solutions faster than an auto-scaling instance!</p>
-            <p>💾 [Colleague 4] – The Persistent Storage of the Team, always retaining valuable knowledge and keeping us from data loss!</p>
-            <p>🔗 [Colleague 5] – The Service Mesh Expert, ensuring smooth communication between all microservices (and team members).</p>
-            <p>📊 [Colleague 6] – The Cloud Monitoring Specialist, always keeping an eye on the logs and alerting before anything goes down.</p>
-            <p>🤖 [Colleague 7] – The Automation Maestro, scripting solutions faster than Terraform applies changes.</p>
-            <p>🚀 [Colleague 8] – The CI/CD Pipeline of the Team, always ensuring smooth deployments and no broken builds!</p>
-            <p>🔥 [Colleague 9] – The Incident Response Hero, jumping in whenever there’s an outage and saving the day.</p>
-            <p>📦 [Colleague 10] – The Containerization King/Queen, wrapping solutions in the perfect Docker image!</p>
-            <p>🌍 [Colleague 11] – The Multi-Region Load Balancer, distributing knowledge and positivity across the team.</p>
-            <p>🔐 [Colleague 12] – The Security Firewall, making sure no vulnerabilities slip through.</p>
-            <p>🌪 [Colleague 13] – The Disaster Recovery Expert, always having a rollback plan ready.</p>
-            <p>💡 [Colleague 14] – The Innovation Engine, constantly bringing in new ideas and best practices.</p>
-            <p>⚙️ [Colleague 15] – The Infrastructure-as-Code Specialist, keeping everything modular, reusable, and efficient.</p>
-            <p>💙 [Colleague 16] – The Team’s Heartbeat, making sure we stay in sync just like a perfect cron job!</p>
-            <p>🎯 [Colleague 17] – The API Gateway, filtering out unnecessary noise and ensuring only the best ideas get through.</p>
-            <p>📜 [Colleague 18] – The Documentation Pro, ensuring no tribal knowledge is lost and onboarding is always smooth.</p>
-            <p>🛠 [Colleague 19] – The Problem Solver, debugging faster than anyone and fixing issues with style.</p>
-            <p>🎉 [Colleague 20] – The Team’s Cheerleader, bringing energy, motivation, and a positive vibe to every stand-up!</p>
+            <p>💾 [Colleague 4] – The Persistent Storage, always retaining valuable knowledge.</p>
+            <p>📦 [Colleague 5] – The Containerization Expert, wrapping solutions in perfect Docker images!</p>
+            <p>🔥 [Colleague 6] – The Incident Responder, jumping in whenever there’s an outage and saving the day.</p>
+            <p>⚙️ [Colleague 7] – The Infra-as-Code Specialist, keeping everything modular and reusable.</p>
+            <p>🌍 [Colleague 8] – The Load Balancer, distributing knowledge across the team.</p>
+            <p>🔐 [Colleague 9] – The Security Guru, making sure no vulnerabilities slip through.</p>
+            <p>🎉 [Colleague 10] – The Team’s Cheerleader, bringing energy and motivation to every stand-up!</p>
+
+            <h2>🌟 The Alumni Legends</h2>
+            <p>🚀 <b>[Ex-Colleague 1]</b> - The Cloud Pioneer, whose scripts still power our deployments!</p>
+            <p>🎩 <b>[Ex-Colleague 2]</b> - The Automation Magician, whose Bash scripts still automate our processes!</p>
         </div>
-        
+
         <h2>📩 Stay in Touch</h2>
         <p>Email: your-email@example.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">Connect with me</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" style="color: #FFD700;">Connect with me</a></p>
+
+        <div class="footer">
+            <p>💙 Thank you all for the memories! 🚀</p>
+        </div>
     </div>
 </body>
 </html>
